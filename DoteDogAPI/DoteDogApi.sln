@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoteDog.Api", "DoteDog.Api\DoteDog.Api.csproj", "{1DAFF549-B69B-4FB8-9310-AD777916E2F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoteDog.Services", "DoteDog.Services\DoteDog.Services.csproj", "{D9AB4EA4-506D-4A5C-B42C-24ACD4BBCA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoteDog.Repositories", "DoteDog.Repositories\DoteDog.Repositories.csproj", "{FB60F3E0-64B9-40FD-82B9-098B72BC5B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoteDog.Models", "DoteDog.Models\DoteDog.Models.csproj", "{EAC36AF3-7B67-4F26-84DD-310C9FA89F16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DAFF549-B69B-4FB8-9310-AD777916E2F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DAFF549-B69B-4FB8-9310-AD777916E2F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DAFF549-B69B-4FB8-9310-AD777916E2F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DAFF549-B69B-4FB8-9310-AD777916E2F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9AB4EA4-506D-4A5C-B42C-24ACD4BBCA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9AB4EA4-506D-4A5C-B42C-24ACD4BBCA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9AB4EA4-506D-4A5C-B42C-24ACD4BBCA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9AB4EA4-506D-4A5C-B42C-24ACD4BBCA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB60F3E0-64B9-40FD-82B9-098B72BC5B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB60F3E0-64B9-40FD-82B9-098B72BC5B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB60F3E0-64B9-40FD-82B9-098B72BC5B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB60F3E0-64B9-40FD-82B9-098B72BC5B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC36AF3-7B67-4F26-84DD-310C9FA89F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC36AF3-7B67-4F26-84DD-310C9FA89F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC36AF3-7B67-4F26-84DD-310C9FA89F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC36AF3-7B67-4F26-84DD-310C9FA89F16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

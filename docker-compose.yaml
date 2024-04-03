@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:12
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT}
+    ports:
+      - "${PGADMIN_HOST_PORT}:${PGADMIN_CONTAINER_PORT}"
+    volumes:
+      - pgadmin-data:/root/.pgadmin
+    links:
+      - "db:pgsql-server"
+    tty: true
+    networks:
+      - pgadmin_net
+    depends_on:
+      - db
+
+volumes:
+  db-data:
+  pgadmin-data:
+
+networks:
+  pgadmin_net:
+    driver: bridge
