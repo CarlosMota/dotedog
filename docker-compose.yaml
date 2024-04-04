@@ -3,6 +3,7 @@ services:
   db:
     image: postgres:12
     restart: unless-stopped
+    container_name: postgres
     environment:
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
@@ -11,31 +12,7 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
-      - "5431:5432"
-
-  pgadmin:
-    image: dpage/pgadmin4
-    restart: unless-stopped
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-      PGADMIN_LISTEN_PORT: ${PGADMIN_LISTEN_PORT}
-    ports:
-      - "${PGADMIN_HOST_PORT}:${PGADMIN_CONTAINER_PORT}"
-    volumes:
-      - pgadmin-data:/root/.pgadmin
-    links:
-      - "db:pgsql-server"
-    tty: true
-    networks:
-      - pgadmin_net
-    depends_on:
-      - db
+      - "5432:5432"
 
 volumes:
   db-data:
-  pgadmin-data:
-
-networks:
-  pgadmin_net:
-    driver: bridge
